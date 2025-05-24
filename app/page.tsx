@@ -1,5 +1,4 @@
 import React from 'react'
-import {Button} from "@/components/ui/button";
 import CompanionCard from "@/components/CompanionCard";
 import CompanionsList from "@/components/CompanionsList";
 import CTA from "@/components/CTA";
@@ -15,7 +14,7 @@ const Page = () => {
              name={'Neura the Brainy Explorer'}
              topic={"Neural Network of the Brain"}
              subject={'science'}
-             duration={'45'}
+             duration={45}
              color={'#ffda6e'}
             />
             <CompanionCard
@@ -23,7 +22,7 @@ const Page = () => {
              name={'Countsy the Number Wizard'}
              topic={"Derivatives & Integrals"}
              subject={'Maths'}
-             duration={'30'}
+             duration={30}
              color={'#e5d0ff'}
             />
             <CompanionCard
@@ -31,7 +30,7 @@ const Page = () => {
              name={'Verba the vocalbulary Builder'}
              topic={"English Literature"}
              subject={'Language'}
-             duration={'30'}
+             duration={30}
              color={'#bde7ff'}
             />
         </section>
