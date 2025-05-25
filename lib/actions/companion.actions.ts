@@ -41,3 +41,15 @@ export const getAllCompanions = async ({ limit = 10, page = 1, subject,topic}:Ge
 
     return companions;
 }
+
+export const getCompanion = async (id: string) => {
+    const superbase = createSupabaseClient();
+
+    const {data, error} = await superbase.from('companions')
+        .select()
+        .eq('id', id);
+
+    if(error) throw new Error(error?.message || 'Failed to get companion');
+
+    return data[0];
+}
