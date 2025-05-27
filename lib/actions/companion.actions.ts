@@ -89,3 +89,14 @@ export const getUserSessions = async (userId:string, limit=10 ) => {
     return data.map(({companions}) => companions)
 }
 
+export const getUserCompanions = async (userId:string) => {
+    const superbase = createSupabaseClient()
+    const {data, error} = await superbase.from('companions')
+        .select()
+        .eq('author', userId)
+
+    if(error)throw new Error(error.message)
+
+    return data;
+}
+
