@@ -2,14 +2,13 @@ import React from 'react'
 import CompanionCard from "@/components/CompanionCard";
 import CompanionsList from "@/components/CompanionsList";
 import CTA from "@/components/CTA";
-import {recentSessions} from "@/constants";
 import {getAllCompanions, getRecentSessions} from "@/lib/actions/companion.actions";
 import {getSubjectColor} from "@/lib/utils";
 
 const Page = async () => {
 
     const companions = await getAllCompanions({limit: 3});
-    const recentSessionsCompanions = await getRecentSessions({limit:10})
+    const recentSessionsCompanions = await getRecentSessions({limit: 10})
 
   return (
     <main>
